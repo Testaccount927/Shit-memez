@@ -1,0 +1,36 @@
+
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("Memz field trip z made by the same creator who made bonzi dummy", "DarkTheme")
+    local Tab = Window:NewTab("Tab1")
+    local Section = Tab:NewSection("Tab1")
+    Section:NewButton("donut giver", "ButtonInfo", function()
+            local args = {
+    [1] = "PICKUP_ITEM",
+    [2] = "Donut"
+}
+
+game:GetService("ReplicatedStorage").NetworkEvents.RemoteFunction:InvokeServer(unpack(args))
+            
+    print("Clicked")
+end)
+    Section:NewButton("Bandage giver", "ButtonInfo", function()
+        local args = {
+    [1] = "PICKUP_ITEM",
+    [2] = "Bandage"
+}
+
+game:GetService("ReplicatedStorage").NetworkEvents.RemoteFunction:InvokeServer(unpack(args))
+            
+            
+    print("Clicked")
+end)
+    Section:NewButton("Medkit giver", "ButtonInfo", function()
+          local args = {
+    [1] = "PICKUP_ITEM",
+    [2] = "MedKit"
+}
+
+game:GetService("ReplicatedStorage").NetworkEvents.RemoteFunction:InvokeServer(unpack(args))
+            
+    print("Clicked")
+end)
